@@ -386,7 +386,7 @@ const Home = ({
               <Chat stopConversationRef={stopConversationRef} />
             </div>
 
-            <Promptbar />
+            
           </div>
         </main>
       )}
