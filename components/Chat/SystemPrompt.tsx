@@ -194,7 +194,7 @@ export const SystemPrompt: FC<Props> = ({
   return (
     <div className="flex flex-col">
       <label className="mb-2 text-left text-neutral-700 dark:text-neutral-400">
-        {t('System Prompt')}
+        {t('Mwongozo wa Mfumo')}
       </label>
       <textarea
         ref={textareaRef}
@@ -210,7 +210,7 @@ export const SystemPrompt: FC<Props> = ({
           }`,
         }}
         placeholder={
-          t(`Enter a prompt or type "/" to select a prompt...`) || ''
+          t(`Ingiza mwongozo au andika '/' kuchagua mwongozo...`) || ''
         }
         value={t(value) || ''}
         rows={1}

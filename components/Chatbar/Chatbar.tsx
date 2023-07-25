@@ -232,7 +232,7 @@ export const Chatbar = () => {
         }
         toggleOpen={handleToggleChatbar}
         handleCreateItem={handleNewConversation}
-        handleCreateFolder={() => handleCreateFolder(t('New folder'), 'chat')}
+        handleCreateFolder={() => handleCreateFolder(t('Folda Mpya'), 'chat')}
         handleDrop={handleDrop}
         
       />

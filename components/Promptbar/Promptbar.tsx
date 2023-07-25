@@ -142,7 +142,7 @@ const Promptbar = () => {
         }
         toggleOpen={handleTogglePromptbar}
         handleCreateItem={handleCreatePrompt}
-        handleCreateFolder={() => handleCreateFolder(t('New folder'), 'prompt')}
+        handleCreateFolder={() => handleCreateFolder(t('Folda Mpya'), 'prompt')}
         handleDrop={handleDrop}
       />
     </PromptbarContext.Provider>

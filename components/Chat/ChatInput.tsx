@@ -386,11 +386,11 @@ export const ChatInput = ({
           rel="noreferrer"
           className="underline"
         >
-          Master Guantai
+          master guantAI
         </a>
         .{' '}
         {t(
-          "Chatbot UI is an advanced chatbot kit for OpenAI's chat models aiming to mimic ChatGPT's interface and functionality.",
+          "master guantAI ni kit ya chatbot iliyoendelea kwa mifano ya chat ya OpenAI inayolenga kuiga kiolesura na utendaji wa ChatGPT.",
         )}
       </div>
     </div>
