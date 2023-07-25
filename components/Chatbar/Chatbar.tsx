@@ -117,7 +117,7 @@ export const Chatbar = () => {
         field: 'selectedConversation',
         value: {
           id: uuidv4(),
-          name: t('New Conversation'),
+          name: t('Mazungumzo Mapya'),
           messages: [],
           model: OpenAIModels[defaultModelId],
           prompt: DEFAULT_SYSTEM_PROMPT,
@@ -159,7 +159,7 @@ export const Chatbar = () => {
           field: 'selectedConversation',
           value: {
             id: uuidv4(),
-            name: t('New Conversation'),
+            name: t('Mazungumzo Mapya'),
             messages: [],
             model: OpenAIModels[defaultModelId],
             prompt: DEFAULT_SYSTEM_PROMPT,
@@ -222,7 +222,7 @@ export const Chatbar = () => {
       <Sidebar<Conversation>
         side={'left'}
         isOpen={showChatbar}
-        addItemButtonTitle={t('New chat')}
+        addItemButtonTitle={t('Chat mpya')}
         itemComponent={<Conversations conversations={filteredConversations} />}
         folderComponent={<ChatFolders searchTerm={searchTerm} />}
         items={filteredConversations}
