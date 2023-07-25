@@ -357,6 +357,18 @@ export const ChatInput = ({
             </div>
           )}
 
+          {showPromptList && filteredPrompts.length > 0 && (
+            <div className="absolute bottom-12 w-full">
+              <PromptList
+                activePromptIndex={activePromptIndex}
+                prompts={filteredPrompts}
+                onSelect={handleInitModal}
+                onMouseOver={setActivePromptIndex}
+                promptListRef={promptListRef}
+              />
+            </div>
+          )}
+
           {isModalVisible && (
             <VariableModal
               prompt={filteredPrompts[activePromptIndex]}
@@ -368,7 +380,15 @@ export const ChatInput = ({
         </div>
       </div>
       <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
-
+        <a
+          href="https://github.com/mckaywrigley/chatbot-ui"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
+          master guantAI
+        </a>
+        .{' '}
         {t(
           "master guantAI ni kit ya chatbot iliyoendelea kwa mifano ya chat ya OpenAI inayolenga kuiga kiolesura na utendaji wa ChatGPT.",
         )}
