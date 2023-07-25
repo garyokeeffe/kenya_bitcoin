@@ -36,7 +36,7 @@ export const TemperatureSlider: FC<Props> = ({
       </label>
       <span className="text-[12px] text-black/50 dark:text-white/50 text-sm">
         {t(
-          'Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.',
+          'Thamani kubwa kama 0.8 zitafanya matokeo kuwa ya kubahatisha zaidi, wakati thamani ndogo kama 0.2 zitafanya iwe yenye mkazo na yenye kudetermini zaidi.',
         )}
       </span>
       <span className="mt-2 mb-1 text-center text-neutral-900 dark:text-neutral-100">
