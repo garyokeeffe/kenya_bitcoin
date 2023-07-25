@@ -289,7 +289,7 @@ const Home = ({
 
     const showPromptbar = localStorage.getItem('showPromptbar');
     if (showPromptbar) {
-      dispatch({ field: 'showPromptbar', value: showPromptbar === 'true' });
+      dispatch({ field: 'showPromptbar', value: showPromptbar === 'false' });
     }
 
     const folders = localStorage.getItem('folders');
