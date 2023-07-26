@@ -361,8 +361,16 @@ export const ChatInput = ({
         </a>
         {' '}
         {t(
-          " ni kit ya chatbot iliyoendelea kwa mifano ya chat ya OpenAI inayolenga kuiga kiolesura na utendaji wa ChatGPT.",
-        )}
+          "  ni chatbot inayolenga Bitcoin iliyoandaliwa na",
+        )}{' '}<a
+        href="https://mlopshop.com/"
+        target="_blank"
+        rel="noreferrer"
+        className="underline"
+      >
+        ML Op Shop.
+      </a>
+      
       </div>
     </div>
   );
