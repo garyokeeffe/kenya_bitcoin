@@ -359,7 +359,7 @@ export const ChatInput = ({
         >
           Bitcoin Mtaani
         </a>
-        .{' '}
+        {' '}
         {t(
           " ni kit ya chatbot iliyoendelea kwa mifano ya chat ya OpenAI inayolenga kuiga kiolesura na utendaji wa ChatGPT.",
         )}
