@@ -76,7 +76,7 @@ export const ChatInput = ({
     if (maxLength && value.length > maxLength) {
       alert(
         t(
-          `Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.`,
+          `Kikomo cha ujumbe ni herufi {{maxLength}}. Umeingiza herufi {{valueLength}}.`,
           { maxLength, valueLength: value.length },
         ),
       );
@@ -93,7 +93,7 @@ export const ChatInput = ({
     }
 
     if (!content) {
-      alert(t('Please enter a message'));
+      alert(t('Tafadhali uliza swali'));
       return;
     }
 

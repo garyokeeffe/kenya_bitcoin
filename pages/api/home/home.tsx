@@ -361,12 +361,12 @@ const Home = ({
     >
       <Head>
         <title>Master Guantai</title>
-        <meta name="description" content="ChatGPT but better." />
+        <meta name="description" content="Kioo chako cha Bitcoin" />
         <meta
           name="viewport"
           content="height=device-height ,width=device-width, initial-scale=1, user-scalable=no"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/bitcoin.ico" />
       </Head>
       {selectedConversation && (
         <main
