@@ -1,105 +1,25 @@
-# Chatbot UI
+# Kenya Bitcoin AI
+Most Bitcion content is produced for English speaking westerners. Even if we could translate this content into Swahili, most of it wouldn't appeal to a person in East Africa.
 
-Chatbot UI is an open source chat UI for AI models.
+This is a Swahili-first Bitcoin education chatbot that layers Kenyan and Tanzanian cultural context into how it delivers it's responses to users. It's aim is to facilitate self-directed and self-paced Bitcion education for the ~130 million natvie Swahili speakers in East Africa. 
 
-See a [demo](https://twitter.com/mckaywrigley/status/1640380021423603713?s=46&t=AowqkodyK6B4JccSOxSPew).
+## Technical Development
+[Master Guantai]("https://twitter.com/MasterGuantai")---a Bitcoin Educator living in Nairobi, Kenya---was the main prompt engineer on this project. He optimized an open source [ Bitcoin-aligned Chat GPT prompt]("https://github.com/garyokeeffe/chatBTC") to perform well in East Africa by fusing it with cultural elements from Tanzania and Kenya.
 
-![Chatbot UI](./public/screenshots/screenshot-0402023.jpg)
+The front-end is a modified [Chatbot-UI]("https://github.com/mckaywrigley/chatbot-ui") interface. It was initially modified to provide Master Guantai with a prompt engineering environment wherein he could get a feel for how his tweaks to the prompts would change model output. Once we finalized a well-performing prompt, we modified the front-end further, stripping it back to provide the user with a simple interface.
 
-## Updates
+## Performance
+This chatbot's performance has not yet gone through rigourous assessment. However, we have two sources of leading indication.
 
-Chatbot UI will be updated over time.
+Firstly, and anecdotally, Master Guantai distributed the chatbot to several Bitcoiners in Kenya and instructed them to try and break it. This process was overwhelmingly successful---most people were unsuccessful in their efforts, but some were successful, and as a result the chatbot is more robust in answering questions around Bitcion and halal.
 
-Expect frequent improvements.
+Secondly, and quantatively, the [Bitcoin-aligned Chat GPT prompt]("https://github.com/garyokeeffe/chatBTC") that was used as the basis of Master Guantai's prompt engineering was benchmarked in May 2023 and performed 16% better than GPT-3.5 at answering Bitcion related questions. However in specific subcategories (such as Bitcion vs Crypto) the Bitcoin-aligned prompt outperformed vanilla GPT-3.5 by 100% (see figure below for more details on benchmarking).
 
-**Next up:**
+![LLM Benchmark](https://github.com/garyokeeffe/kenya_bitcoin/blob/main/BitcoinLLMUpdate1.png)
 
-- [ ] Sharing
-- [ ] "Bots"
-
-## Deploy
-
-**Vercel**
-
-Host your own live version of Chatbot UI with Vercel.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmckaywrigley%2Fchatbot-ui)
-
-**Docker**
-
-Build locally:
-
-```shell
-docker build -t chatgpt-ui .
-docker run -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 chatgpt-ui
-```
-
-Pull from ghcr:
-
-```
-docker run -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 ghcr.io/mckaywrigley/chatbot-ui:main
-```
-
-## Running Locally
-
-**1. Clone Repo**
-
-```bash
-git clone https://github.com/mckaywrigley/chatbot-ui.git
-```
-
-**2. Install Dependencies**
-
-```bash
-npm i
-```
-
-**3. Provide OpenAI API Key**
-
-Create a .env.local file in the root of the repo with your OpenAI API Key:
-
-```bash
-OPENAI_API_KEY=YOUR_KEY
-```
-
-> You can set `OPENAI_API_HOST` where access to the official OpenAI host is restricted or unavailable, allowing users to configure an alternative host for their specific needs.
-
-> Additionally, if you have multiple OpenAI Organizations, you can set `OPENAI_ORGANIZATION` to specify one.
-
-**4. Run App**
-
-```bash
-npm run dev
-```
-
-**5. Use It**
-
-You should be able to start chatting.
-
-## Configuration
-
-When deploying the application, the following environment variables can be set:
-
-| Environment Variable              | Default value                  | Description                                                                                                                               |
-| --------------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| OPENAI_API_KEY                    |                                | The default API key used for authentication with OpenAI                                                                                   |
-| OPENAI_API_HOST                   | `https://api.openai.com`       | The base url, for Azure use `https://<endpoint>.openai.azure.com`                                                                         |
-| OPENAI_API_TYPE                   | `openai`                       | The API type, options are `openai` or `azure`                                                                                             |
-| OPENAI_API_VERSION                | `2023-03-15-preview`           | Only applicable for Azure OpenAI                                                                                                          |
-| AZURE_DEPLOYMENT_ID               |                                | Needed when Azure OpenAI, Ref [Azure OpenAI API](https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/reference#completions) |
-| OPENAI_ORGANIZATION               |                                | Your OpenAI organization ID                                                                                                               |
-| DEFAULT_MODEL                     | `gpt-3.5-turbo`                | The default model to use on new conversations, for Azure use `gpt-35-turbo`                                                               |
-| NEXT_PUBLIC_DEFAULT_SYSTEM_PROMPT | [see here](utils/app/const.ts) | The default system prompt to use on new conversations                                                                                     |
-| NEXT_PUBLIC_DEFAULT_TEMPERATURE   | 1                              | The default temperature to use on new conversations                                                                                       |
-| GOOGLE_API_KEY                    |                                | See [Custom Search JSON API documentation][GCSE]                                                                                          |
-| GOOGLE_CSE_ID                     |                                | See [Custom Search JSON API documentation][GCSE]                                                                                          |
-
-If you do not provide an OpenAI API key with `OPENAI_API_KEY`, users will have to provide their own key.
-
-If you don't have an OpenAI API key, you can get one [here](https://platform.openai.com/account/api-keys).
-
-## Contact
-
-If you have any questions, feel free to reach out to Mckay on [Twitter](https://twitter.com/mckaywrigley).
-
-[GCSE]: https://developers.google.com/custom-search/v1/overview
+## Future work
+Next steps for this project are:
+- add ability to record user interactions so that we can understand and report on common lines of questioning
+- formally release this project into the world
+- add other languages (and cultural contexts) to the chatbot
+- share our processes, tools, and insights with other like-minded individuals on similar missions
